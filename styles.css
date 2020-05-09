@@ -1,0 +1,49 @@
+.navbar {
+  background-color: white;
+  height: 5.5rem;
+  padding-left: 4.5rem;
+  padding-right: 4.5rem;
+}
+
+#main-class {
+  border-radius: 30px;
+}
+
+#button-find {
+  margin-top: 20px;
+}
+
+.button-submit {
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  background: #e75f5f;
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px rgba(0,0,0, 0.3);
+  margin-top: 20px;
+}
+
+.button-submit:hover {    
+  color: rgba(0,0,0, 0.6);
+}
+
+.navbar-brand {
+  margin-top: 20px;
+}
+
+label {
+  padding-top: 20px;
+  text-align: center;
+  color:#e75f5f;
+  font-weight: 900;
+}
+
+.form-control.is-valid:focus,
+.was-validated :valid.form-control {
+  border-color: #ced4da !important;
+  background-image: inherit !important;
+  box-shadow: inherit !important;
+}

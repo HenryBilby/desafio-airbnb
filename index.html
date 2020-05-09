@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <link rel="stylesheet" 
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="./styles.css">
+        <title>.:Desafio AirBnB:.</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div id="topo" class="row">
+                <!-- <nav class="navbar border-bottom fixed-top navbar-light"> -->
+                    <div id="topo-inicio" class="col-md-2">
+                        <a class="navbar-brand" href="https://www.airbnb.com.br/">
+                            <img src="./airbnb.png" width="157" height="49" alt="">
+                        </a>   
+                    </div>
+
+                    <div class="col-md-2">
+                        <label for="location-search">Localização</label>
+                        <input type="text" class="form-control" placeholder="Para onde você vai?" required>
+                        <div class="invalid-feedback">
+                            Selecione uma localização
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <label for="checkin">Check-in</label>
+                        <input type="date" class="form-control" id="checkin" required>
+                        <div class="invalid-feedback date-fields">
+                            Selecione uma data de checkin
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <label for="checkout">Checkout</label>
+                        <input type="date" class="form-control" id="checkout" required>
+                        <div class="invalid-feedback date-fields">
+                            Selecione uma data de checkin
+                        </div>
+                    </div>
+
+                    <div id="button-find" class="col-md-2">
+                        <button class="button-submit" type="submit" onclick="handleClickSearch()">
+                            Buscar 
+                            <img src="./find.svg" width="30" height="30" alt=""> 
+                        </button>
+                    </div>
+                <!-- </nav> -->
+            </div>
+
+            <div class="row" id="cards">
+
+            </div>
+        </div>
+        <script src="./index.js"> </script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+            crossorigin="anonymous"></script>
+    </body>
+</html>
