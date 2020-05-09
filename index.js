@@ -8,7 +8,7 @@ function renderCard(card) {
     div.className = "col-md-4";
     div.innerHTML = `
     <div id= "main-card" class="card" style="width: 20rem; margin: 2rem">
-        <img src="${card.photo}" class="card-img-top" alt="${card.name}"/>
+        <img id="img-card" src="${card.photo}" class="card-img-top" alt="${card.name}"/>
         <div class="card-body">
             <h5 class="card-title">${card.name}</h5>
             <p class="card-text">
@@ -61,7 +61,6 @@ function validateForm() {
     let checkin = document.getElementById("checkin");
     let checkout = document.getElementById("checkout");
 
-    let actualDate = new Date();
     let checkinDate = new Date(checkin.value);
     let checkoutDate = new Date(checkout.value);
 
@@ -83,8 +82,6 @@ function validateForm() {
 
   function handleClickSearch() {
     if (validateForm()) {
-        let clean_error_msg = document.querySelectorAll(".date-fields");
-        clean_error_msg.textContent = "";
         challengeAirbnb();
     }
   }

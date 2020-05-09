@@ -13,6 +13,32 @@
   margin-top: 20px;
 }
 
+#main-card {
+  border-radius: 20px;
+}
+
+#main-card:hover {
+  color: #fff;
+  transition-duration: 200ms;
+  background-color: #e75f5f;
+  border: 1px solid #ebebeb;
+  box-shadow: 0px 2px 5px #cacaca;
+  font-weight: 900;
+}
+
+#img-card {
+  border-radius: 20px;
+}
+
+#footer {
+  text-align: center;
+}
+
+#footer h6 {
+  color: #e75f5f;
+  font-weight: bold;
+}
+
 .button-submit {
   border: none;
   border-radius: 8px;
