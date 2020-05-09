@@ -10,47 +10,49 @@
 
     <body>
         <div class="container">
-            <div id="topo" class="row">
-                <!-- <nav class="navbar border-bottom fixed-top navbar-light"> -->
-                    <div id="topo-inicio" class="col-md-2">
-                        <a class="navbar-brand" href="https://www.airbnb.com.br/">
-                            <img src="./airbnb.png" width="157" height="49" alt="">
-                        </a>   
-                    </div>
-
-                    <div class="col-md-2">
-                        <label for="location-search">Localização</label>
-                        <input type="text" class="form-control" placeholder="Para onde você vai?" required>
-                        <div class="invalid-feedback">
-                            Selecione uma localização
+            <form id="form-search" onsubmit="event.preventDefault()" novalidate>
+                <div id="topo" class="form-row">
+                    <!-- <nav class="navbar border-bottom fixed-top navbar-light"> -->
+                        <div id="topo-inicio" class="col-md-2">
+                            <a class="navbar-brand" href="https://www.airbnb.com.br/">
+                                <img src="./airbnb.png" width="157" height="49" alt="">
+                            </a>   
                         </div>
-                    </div>
-
-                    <div class="col-md-2">
-                        <label for="checkin">Check-in</label>
-                        <input type="date" class="form-control" id="checkin" required>
-                        <div class="invalid-feedback date-fields">
-                            Selecione uma data de checkin
+    
+                        <div class="col-md-2">
+                            <label for="location-search">Localização</label>
+                            <input type="text" class="form-control" placeholder="Para onde você vai?" required>
+                            <div class="invalid-feedback">
+                                Selecione uma localização
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="col-md-2">
-                        <label for="checkout">Checkout</label>
-                        <input type="date" class="form-control" id="checkout" required>
-                        <div class="invalid-feedback date-fields">
-                            Selecione uma data de checkin
+    
+                        <div class="col-md-2">
+                            <label for="checkin">Check-in</label>
+                            <input type="date" class="form-control" id="checkin" required>
+                            <div class="invalid-feedback date-fields">
+                                Selecione uma data de checkin
+                            </div>
                         </div>
-                    </div>
-
-                    <div id="button-find" class="col-md-2">
-                        <button class="button-submit" type="submit" onclick="handleClickSearch()">
-                            Buscar 
-                            <img src="./find.svg" width="30" height="30" alt=""> 
-                        </button>
-                    </div>
-                <!-- </nav> -->
-            </div>
-
+    
+                        <div class="col-md-2">
+                            <label for="checkout">Checkout</label>
+                            <input type="date" class="form-control" id="checkout" required>
+                            <div class="invalid-feedback date-fields">
+                                Selecione uma data de checkin
+                            </div>
+                        </div>
+    
+                        <div id="button-find" class="col-md-2">
+                            <button class="button-submit" type="submit" onclick="handleClickSearch()">
+                                Buscar 
+                                <img src="./find.svg" width="30" height="30" alt=""> 
+                            </button>
+                        </div>
+                    <!-- </nav> -->
+                </div>            
+            </form>
+            
             <div class="row" id="cards">
 
             </div>
