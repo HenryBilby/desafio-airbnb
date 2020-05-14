@@ -22,7 +22,7 @@
   transition-duration: 200ms;
   background-color: #e75f5f;
   border: 1px solid #ebebeb;
-  box-shadow: 0px 2px 5px #cacaca;
+  box-shadow: 0px 5px 5px #cacaca;
   font-weight: 900;
 }
 
@@ -53,7 +53,9 @@
 }
 
 .button-submit:hover {    
-  color: rgba(0,0,0, 0.6);
+  color: rgba(231,95,95, 0.6);
+  background-color: #fff;
+  font-weight: bold;
 }
 
 .navbar-brand {

@@ -18,8 +18,30 @@ function renderCard(card) {
                 Preço: R$ ${card.price},00
             </p>
             <p class="card-text">
-            Total: R$ ${card.price*countDays},00
-        </p>
+                Total: R$ ${card.price*countDays},00
+            </p>
+            // <button type="button" class="button-submit" data-toggle="modal" data-target="#exampleModal">
+            //     Mapa
+            // </button>
+            // <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            //     <div class="modal-dialog" role="document">
+            //     <div class="modal-content">
+            //         <div class="modal-header">
+            //         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            //         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            //             <span aria-hidden="true">&times;</span>
+            //         </button>
+            //         </div>
+            //         <div class="modal-body">
+            //         ...
+            //         </div>
+            //         <div class="modal-footer">
+            //         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            //         <button type="button" class="btn btn-primary">Save changes</button>
+            //         </div>
+            //     </div>
+            //     </div>
+            // </div>
         </div>
     </div>`;
     cardsContainer.appendChild(div);
@@ -85,3 +107,40 @@ function validateForm() {
         challengeAirbnb();
     }
   }
+
+  function initMap() {
+
+    const locations = [
+        ['Avenida Paulista', -23.563311, -46.654275, 5],
+        ['Gama Academy', -23.567427, -46.684607, 4],
+        ['Marco Zero', -23.550460, -46.633934, 3],
+        ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
+        ['Maroubra Beach', -33.950198, 151.259302, 1]
+    ];
+
+    const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 10,
+        center: new google.maps.LatLng(-23.550460, -46.633934),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    const infowindow = new google.maps.InfoWindow();
+
+    let marker, i;
+
+
+
+    for (i = 0; i < locations.length; i++) {
+        marker = new google.maps.Marker({
+            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+            map: map
+        });
+
+        google.maps.event.addListener(marker, 'click', (function (marker, i) {
+            return function () {
+                infowindow.setContent(locations[i][0]);
+                infowindow.open(map, marker);
+            }
+        })(marker, i));
+    }
+}
