@@ -109,7 +109,6 @@ function validateForm() {
   }
 
   function initMap() {
-
     const locations = [
         ['Avenida Paulista', -23.563311, -46.654275, 5],
         ['Gama Academy', -23.567427, -46.684607, 4],
@@ -128,8 +127,6 @@ function validateForm() {
 
     let marker, i;
 
-
-
     for (i = 0; i < locations.length; i++) {
         marker = new google.maps.Marker({
             position: new google.maps.LatLng(locations[i][1], locations[i][2]),
@@ -143,4 +140,4 @@ function validateForm() {
             }
         })(marker, i));
     }
-}
+  }
